@@ -19,6 +19,14 @@ public class UserRegistration {
 			System.out.println("Last name is not  valid.....!");
 		}
 	}
+	
+	public static void checkEmail(String email) {
+		if(email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+			System.out.println("Email-Id is valid.....!");
+		}else {
+			System.out.println("Email-Id is not  valid.....!");
+		}
+	}
 
 	public static void main(String[] args) {
 		
@@ -29,14 +37,18 @@ public class UserRegistration {
 		String fname = sc.next();
 		System.out.println("Enter Last Name: "); //Last name
 		String lname = sc.next();
+		System.out.println("Enter Email Address: "); //Email address
+		String emailId = sc.next();
 		
 		System.out.println();
 		System.out.println("First Name = " + fname + "\n"
-				+ "Last Name = " + lname);
+				+ "Last Name = " + lname + "\n"
+				+ "Email-ID = " + emailId);
 		
 		System.out.println();
 		firstName(fname);
 		lastName(lname);
+		checkEmail(emailId);
 	}
 
 }
