@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class UserRegistration {
 	
 	public static void firstName(String fName) {
-		if(fName.matches("[A-Z][a-z]*")) {
+		if(fName.matches("[A-Z][a-z]{3,}")) {
 			System.out.println("First name is valid.....!");
 		}else {
 			System.out.println("First name is not  valid.....!");
