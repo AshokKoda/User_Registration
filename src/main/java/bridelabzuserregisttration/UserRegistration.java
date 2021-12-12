@@ -11,16 +11,32 @@ public class UserRegistration {
 			System.out.println("First name is not  valid.....!");
 		}
 	}
+	
+	public static void lastName(String lName) {
+		if(lName.matches("[A-Z][a-z]{3,}")) {
+			System.out.println("Last name is valid.....!");
+		}else {
+			System.out.println("Last name is not  valid.....!");
+		}
+	}
 
 	public static void main(String[] args) {
 		
 		System.out.println("-----------Welcome to User Registration------------");
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter First Name: ");
+		System.out.println("Enter First Name: "); //First name
 		String fname = sc.next();
-		System.out.println("First Name = " + fname);
+		System.out.println("Enter Last Name: "); //Last name
+		String lname = sc.next();
+		
+		System.out.println();
+		System.out.println("First Name = " + fname + "\n"
+				+ "Last Name = " + lname);
+		
+		System.out.println();
 		firstName(fname);
+		lastName(lname);
 	}
 
 }
