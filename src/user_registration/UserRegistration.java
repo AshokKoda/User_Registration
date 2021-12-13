@@ -35,6 +35,14 @@ public class UserRegistration {
 			System.out.println("Mobile Number is not  valid.....!");
 		}
 	}
+	
+	public static void passwordEightChar(String password) {
+		if (password.matches("^[0-9]{8,}")) {
+			System.out.println("Password have 8 characters...valid!");
+		} else {
+			System.out.println("Password must be have 8 characters!");
+		}
+	}
 
 	public static void main(String[] args) {
 
@@ -49,16 +57,20 @@ public class UserRegistration {
 		String emailId = sc.next();
 		System.out.println("Enter Mobile No: "); // Mobile no
 		String mobileno = sc.next();
+		System.out.println("Enter Password: "); // Password must be 8 characters
+		String password = sc.next();
 
 		System.out.println();
 		System.out.println("First Name = " + fname + "\n" + "Last Name = " + lname + "\n" + "Email-ID = " + emailId
-				+ "\n" + "Mobile Number = " + mobileno);
+				+ "\n" + "Mobile Number = " + mobileno + "\n"
+				+ "Password = " + password);
 
 		System.out.println();
 		firstName(fname);
 		lastName(lname);
 		checkEmail(emailId);
 		mobileFormat(mobileno);
+		passwordEightChar(password);
 	}
 
 }
