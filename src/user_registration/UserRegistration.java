@@ -36,8 +36,8 @@ public class UserRegistration {
 		}
 	}
 	
-	public static void passwordEightChar(String password) {
-		if (password.matches("^[A-Z][0-9]{8,}")) {
+	public static void passwordValidation(String password) {
+		if (password.matches("((?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@%#$]).{8,20})")) {
 			System.out.println("Password have 8 characters valid!");
 		} else {
 			System.out.println("Password must be have 8 characters or not valid!");
@@ -70,7 +70,7 @@ public class UserRegistration {
 		lastName(lname);
 		checkEmail(emailId);
 		mobileFormat(mobileno);
-		passwordEightChar(password);
+		passwordValidation(password);
 	}
 
 }
